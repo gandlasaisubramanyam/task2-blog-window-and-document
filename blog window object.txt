@@ -1,0 +1,107 @@
+ BLOG-3:
+
+
+Document Object:
+        The document object represent a web page that is loaded in the browser.
+By accessing the document object, we can access the element in the HTML page.
+ With the help of document objects, we can add dynamic content to our web page. 
+The document object can be accessed with a window.document or just document.
+
+
+Properties of document:
+
+activeElement: It returns the currently active elements in the document.
+         body: It returns the contents of the body element.
+      anchors: It returns all <a> elements that have a name attribute.
+      baseURI: It returns a string value that represents the base URI of the document.
+       cookie: It returns the cookie of the current document.
+      charSet: It returns a string, representing the document’s character encoding.
+  defaultView: It returns the current Window Object.
+   designMode: It is used to set documents as editable or read-only.
+       domain: It returns the domain name of the document server.
+      doctype: It returns the document’s doctype.
+Syntax:
+//document object:
+document.propertyname
+// OR
+window.document.propertyname
+
+Example 2: Focus on the document object.
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Document object</title>
+</head>
+  
+<body style="color:white">
+    <h1></h1>
+    <p class="details"></p>
+  
+    <p class="details"></p>
+  
+    <p class="details"></p>
+  
+    <script>
+        document.bgColor = "rgb(89, 135, 235)";
+        const text = prompt('enter the text to appear on screen');
+        const h1 = document.querySelector('h1');
+        h1.textContent = text;
+        const p = document.getElementsByClassName('details');
+        p[0].textContent = "document type:" + 
+              document.contentType;
+        p[1].textContent = "url :" + document.bgColor;
+        p[2].textContent = "title :" + document.title;
+    </script>
+</body>
+</html>
+output:
+welcome to Document Object
+document type : text
+url :rgb(89,135,45)
+title : document object
+
+Window Object: 
+       The window object is the topmost object of the DOM hierarchy.
+ It represents a browser window or frame that displays the contents of the webpage.
+Whenever a window appears on the screen to display the contents of the document, 
+the window object is created. 
+
+
+Properties of windows object :
+
+     innerHeight: It is used to get the height of the content area of the browser window.
+      innerWidth: It is used to get the width of the content area of the browser window.
+            Name: It contains the name of the referenced window.
+          Window: It returns the current window or frame.
+       Navigator: It returns a reference to the navigator object.
+     outerHeight: It will get the height of the outside of the browser window.
+      outerWidth: It will get the width of the outside of the browser window.
+          Status: It overrides the default status and places a message in the status bar.
+             Top: It returns a reference to the topmost window containing a frame if many windows are opened.
+         Toolbar: It will result in the toolbar object, whose visibility can be toggled in the window.
+Syntax:
+//window object:
+window.propertyname;
+
+Example:
+        window.document.bgColor = "aqua";
+        const height = document.getElementById('innerheight');
+        const width = document.getElementById('innerwidth');
+        window.document.querySelector('h1').textContent = 
+            "Welcome to window object";
+        height.textContent = "innerheight - " + 
+            window.innerHeight;
+        width.textContent = "innerwidth - " + 
+            window.innerWidth;
+
+Output:
+       welcome to window object
+       inner height : 701
+       inner width : 364
+
+
