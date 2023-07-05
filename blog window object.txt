@@ -26,7 +26,7 @@ document.propertyname
 // OR
 window.document.propertyname
 
-Example 2: Focus on the document object.
+Example : Focus on the document object.
 <!DOCTYPE html>
 <html lang="en">
   
